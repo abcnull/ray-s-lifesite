@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import siteConfig from '@/site-config'
+
+// 根据 icon 看展示何种 hover 图片
+function whenHover(icon: string) {
+  if (icon === "i-simple-icons-wechat") {
+    // 展示微信微信加好友图片
+  } else if (icon === "i-ri-wechat-line") {
+    // 展示微信支付照片
+  } else if (icon === "i-simple-icons-alipay") {
+    // 展示支付宝支付照片
+  }
+  return null
+}
+---
+
+<BaseLayout description={siteConfig.description}>
+  <article class="prose">
+    <h1 class="text-title">Ray S</h1>
+
+    <p>这里联系我 Find me on️</p>
+    <p class="flex gap-x-4 gap-y-2 flex-wrap">
+      {
+        siteConfig.socialLinks.map((link) => (
+            <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
+              <i class:list={[link.icon]} />
+              {link.text}
+            </a>
+        ))
+      }
+    </p>
+
+    <p>
+      这里是我的邮箱📮:
+      <a prose-link aria-label={siteConfig.email} href={`mailto:${siteConfig.email}`}>
+        {siteConfig.email}
+      </a>
+    </p>
+
+    <hr class="hr-line" />
+
+    <p>男，目前在 北京 工作，目前居住在 北京昌平</p>
+    <p>学着写一点后端，写一点前端，也写一点游戏，也做一点测试</p>
+
+    <p>工作基于 Work with</p>
+    <p class="flex gap-x-4 gap-y-2 flex-wrap">
+      {
+        siteConfig.workWithLinks.map((link) => (
+            <a aria-label={link.text} target="_blank" class="prose-link">
+              <i class:list={[link.icon]} />
+              {link.text}
+            </a>
+        ))
+      }
+    </p>
+
+    <hr class="hr-line" />
+
+    <p>
+      <img width="640" height="360" src="/profile.jpg" alt="profile" />
+    </p>
+
+  </article>
+</BaseLayout>
