@@ -28,8 +28,13 @@ export const siteConfig = {
     },
     {
       text: 'Steam',
-      href: '',
+      href: 'https://steamcommunity.com/id/abcnull/',
       icon: 'i-simple-icons-steam',
+    },
+    {
+      text: 'EpicGames',
+      href: '',
+      icon: 'i-simple-icons-epicgames',
     },
     {
       text: 'Bilibili',

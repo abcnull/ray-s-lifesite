@@ -21,7 +21,7 @@ import { getLinkTarget } from '@/utils/link'
       <span op-70>&nbsp;&nbsp;&copy;&nbsp;&nbsp;{{ new Date().getFullYear() }}&nbsp;&nbsp;{{ siteConfig.author }}.</span>
     </div>
     <div flex>
-      <span op-70>基于&nbsp;&nbsp;{{ siteConfig.originAuthor }}&nbsp;&nbsp;的&nbsp;&nbsp;{{ siteConfig.originProject }}&nbsp;&nbsp;项目修改.</span>
+      <span op-70>Derived&nbsp;&nbsp;from&nbsp;&nbsp;the&nbsp;&nbsp;transformation&nbsp;&nbsp;of&nbsp;&nbsp;{{ siteConfig.originAuthor }}'s&nbsp;&nbsp;{{ siteConfig.originProject }}&nbsp;&nbsp;project.</span>
     </div>
   </footer>
 </template>

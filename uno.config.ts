@@ -62,6 +62,7 @@ export default defineConfig({
     'i-ri-wechat-line',
     'i-simple-icons-qq',
     'i-simple-icons-steam',
+    'i-simple-icons-epicgames',
     'i-simple-icons-sinaweibo',
     'i-ri-github-line',
     'i-ri-twitter-x-line',
