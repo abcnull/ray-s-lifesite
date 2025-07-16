@@ -6,6 +6,8 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    // 确保 types 包含 astro 相关类型
+    "types": ["astro/client", "astro/transitions"],
     "strictNullChecks": true
   }
 }
