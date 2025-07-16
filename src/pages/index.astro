@@ -4,11 +4,11 @@ import siteConfig from '@/site-config'
 
 // 根据 icon 看展示何种 hover 图片
 function whenHover(icon: string) {
-  if (icon === "i-simple-icons-wechat") {
+  if (icon === 'i-simple-icons-wechat') {
     // 展示微信微信加好友图片
-  } else if (icon === "i-ri-wechat-line") {
+  } else if (icon === 'i-ri-wechat-line') {
     // 展示微信支付照片
-  } else if (icon === "i-simple-icons-alipay") {
+  } else if (icon === 'i-simple-icons-alipay') {
     // 展示支付宝支付照片
   }
   return null
@@ -23,10 +23,10 @@ function whenHover(icon: string) {
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       {
         siteConfig.socialLinks.map((link) => (
-            <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
-              <i class:list={[link.icon]} />
-              {link.text}
-            </a>
+          <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
+            <i class:list={[link.icon]} />
+            {link.text}
+          </a>
         ))
       }
     </p>
@@ -47,10 +47,10 @@ function whenHover(icon: string) {
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       {
         siteConfig.workWithLinks.map((link) => (
-            <a aria-label={link.text} target="_blank" class="prose-link">
-              <i class:list={[link.icon]} />
-              {link.text}
-            </a>
+          <a aria-label={link.text} target="_blank" class="prose-link">
+            <i class:list={[link.icon]} />
+            {link.text}
+          </a>
         ))
       }
     </p>
@@ -60,6 +60,5 @@ function whenHover(icon: string) {
     <p>
       <img width="640" height="360" src="/profile.jpg" alt="profile" />
     </p>
-
   </article>
 </BaseLayout>
