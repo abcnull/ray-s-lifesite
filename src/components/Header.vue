@@ -74,6 +74,8 @@ function toggleNavDrawer() {
 }
 </script>
 
+<!-- 页头 -->
+
 <template>
   <header
     id="header" :class="{ 'header-bg-blur': scroll > 20 }"
@@ -91,7 +93,7 @@ function toggleNavDrawer() {
           {{ link.text }}
         </a>
       </nav>
-      <div sm:hidden h-full flex items-center @click="toggleNavDrawer()">
+      <div class="sm:hidden h-full flex items-center" @click="toggleNavDrawer()">
         <menu i-ri-menu-2-fill />
       </div>
     </div>

@@ -39,6 +39,8 @@ function getYear(date: Date | string | number) {
 }
 </script>
 
+<!-- 文章列表展示组件 -->
+
 <template>
   <ul sm:min-h-38 min-h-28 mb-18>
     <template v-if="!list || list.length === 0">

@@ -11,6 +11,8 @@ function toTop() {
 }
 </script>
 
+<!-- 滚动到上方 -->
+
 <template>
   <button
     aria-label="Scroll to top"

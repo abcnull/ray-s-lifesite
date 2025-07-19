@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import { type CollectionPosts } from '@/types'
 import { getPosts } from '@/utils/posts'
 
+// 动态路由生成，文章路由
 export async function getStaticPaths() {
   const posts = await getPosts()
   return posts.map((post) => {
@@ -27,6 +28,7 @@ function getDate(date: string) {
 }
 ---
 
+<!-- 技术文章页面路由 -->
 <BaseLayout title={title} description={description} pageType="article">
   <article class="prose">
     <h1>{title}</h1>

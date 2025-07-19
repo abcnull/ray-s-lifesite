@@ -9,6 +9,8 @@ defineProps<{
 }>()
 </script>
 
+<!-- 项目列表展示组件 -->
+
 <template>
   <ul grid="~ cols-1 sm:cols-2 gap-4">
     <template v-if="!list || list.length === 0">

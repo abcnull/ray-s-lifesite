@@ -1,5 +1,7 @@
 import type { CollectionEntry } from 'astro:content'
 
+// 项目的类型定义文件
+
 export type PostKey = 'blog'
 
 export type CollectionPosts = CollectionEntry<PostKey>

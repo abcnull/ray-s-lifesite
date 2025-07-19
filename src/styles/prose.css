@@ -1,3 +1,5 @@
+/* 专门用于格式化文章内容（如博客文章）的样式表 */
+
 .prose {
   --at-apply: text-base lh-1.75 mb-16 max-w-none sm: min-h-50vh min-h-38vh;
 }

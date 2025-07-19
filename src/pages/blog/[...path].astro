@@ -4,6 +4,7 @@ import ListPosts from '@/components/ListPosts.vue'
 import siteConfig from '@/site-config'
 import { getPosts } from '@/utils/posts'
 
+// 动态路由生成
 export async function getStaticPaths() {
   const paths = siteConfig.page.blogLinks.map((nav) => {
     const href = nav.href.replace('/blog', '')
@@ -18,6 +19,11 @@ export async function getStaticPaths() {
 
 const { path } = Astro.params
 
+/**
+ * path == undefined 时候，getPosts 不会进行 slug 筛选，返回所有文章
+ * path == notes 时候，getPosts 会进行 slug 筛选，返回所有文章，且 slug 包含 notes 的文章
+ * path == talks 时候，getPosts 会进行 slug 筛选，返回所有文章，且 slug 包含 talks 的文章
+ */
 const posts = await getPosts(path)
 
 function activeLink(pathname: string) {
@@ -25,6 +31,7 @@ function activeLink(pathname: string) {
 }
 ---
 
+<!-- 个人生活页面路由 -->
 <BaseLayout title="Blog" description="List of all the blog posts." pageNav={true} pageOperate={true}>
   <div class="flex flex-col gap-2 sm:flex-row sm:gap-4 flex-wrap mb-8">
     {

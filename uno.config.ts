@@ -9,6 +9,8 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+// UnoCSS的配置文件
+
 export default defineConfig({
   shortcuts: [
     {
@@ -28,8 +30,8 @@ export default defineConfig({
     },
   ],
   presets: [
+    presetAttributify(), // 确保此行存在
     presetUno(),
-    presetAttributify(),
     presetIcons({
       scale: 1.2,
       prefix: 'i-',

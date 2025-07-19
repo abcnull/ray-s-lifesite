@@ -2,6 +2,8 @@
 import siteConfig from '@/site-config'
 </script>
 
+<!-- 页尾 -->
+
 <template>
   <footer class="w-full mt-18 pt-6 pb-8 max-w-3xl text-sm flex flex-col gap-4 border-main border-t !border-op-50 text-dark dark:text-white">
     <div flex>

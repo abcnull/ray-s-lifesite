@@ -21,26 +21,7 @@ export const projectData: ProjectData = [
 
   {
     title: 'Web 前端项目 Web Frontend',
-    projects: [
-      // {
-      //   text: 'Project Name',
-      //   description: 'Your project description information is a long piece of text.',
-      //   icon: 'i-carbon-campsite',
-      //   href: '/',
-      // },
-      // {
-      //   text: 'Project Name',
-      //   description: 'Your project description information is a long piece of text.',
-      //   icon: 'i-carbon-campsite',
-      //   href: '/',
-      // },
-      // {
-      //   text: 'Project Name',
-      //   description: 'Your project description information is a long piece of text.',
-      //   icon: 'i-carbon-campsite',
-      //   href: '/',
-      // },
-    ],
+    projects: [],
   },
 
   {

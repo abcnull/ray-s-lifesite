@@ -1,3 +1,5 @@
+// 项目的站点配置文件
+
 export const siteConfig = {
 
   author: 'Ray S',
@@ -33,13 +35,7 @@ export const siteConfig = {
     },
     {
       text: 'EpicGames',
-      href: '',
       icon: 'i-simple-icons-epicgames',
-    },
-    {
-      text: 'Bilibili',
-      href: '',
-      icon: 'i-simple-icons-bilibili',
     },
   ],
 
@@ -149,7 +145,7 @@ export const siteConfig = {
   // header 头图
   header: {
     logo: {
-      src: '/img.png', // todo
+      src: '/img.svg', // todo
       alt: 'Logo Image',
     },
     navLinks: [
