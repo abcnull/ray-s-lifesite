@@ -3,17 +3,42 @@ import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
 
 // 根据 icon 看展示何种 hover 图片
-function whenHover(icon: string) {
-  if (icon === 'i-simple-icons-wechat') {
+function whenHover(text: string) {
+  if (text === 'Wechat:a463279708') {
     // 展示微信微信加好友图片
-  } else if (icon === 'i-ri-wechat-line') {
+    return '/wechat-add.jpg'
+  } else if (text === 'WechatPay') {
     // 展示微信支付照片
-  } else if (icon === 'i-simple-icons-alipay') {
+    return '/wechat-pay.jpg'
+  } else if (text === 'AliPay') {
     // 展示支付宝支付照片
+    return '/ali-pay.jpg'
   }
   return null
 }
 ---
+
+<style>
+  .hover-image {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    max-width: 300px;
+    max-height: 300px;
+    left: 0; /* 相对于父元素左侧对齐 */
+    top: 100%; /* 显示在链接下方 */
+    margin-top: 4px; /* 与链接保持一点间距 */
+  }
+
+  .link-container {
+    position: relative;
+    display: inline-block; /* 保持链接行内显示 */
+  }
+
+  .link-container:hover .hover-image {
+    display: block;
+  }
+</style>
 
 <!-- 网站首页 --><!-- pages 下文件会自动生成路由，index.astro → /，about.astro → /about，posts/[slug].astro → /posts/任意文章路径 -->
 <BaseLayout description={siteConfig.description}>
@@ -23,12 +48,18 @@ function whenHover(icon: string) {
     <p>这里联系我 Find me on️</p>
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       {
-        siteConfig.socialLinks.map((link) => (
-          <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
-            <i class:list={[link.icon]} />
-            {link.text}
-          </a>
-        ))
+        siteConfig.socialLinks.map((link) => {
+          const hoverImage = whenHover(link.text)
+          return (
+            <div class="link-container flex-shrink-0 flex-grow-0 mr-4 mb-2">
+              <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
+                <i class:list={[link.icon]} />
+                {link.text}
+              </a>
+              {hoverImage && <img src={hoverImage} alt={`${link.text} Hover Image`} class="hover-image" />}
+            </div>
+          )
+        })
       }
     </p>
 
@@ -41,14 +72,34 @@ function whenHover(icon: string) {
 
     <hr class="hr-line" />
 
+    <p>支持我 👇</p>
+    <p>Buy me a boba tea to keep the content coming! 🥤</p>
+    <p class="flex gap-x-4 gap-y-2 flex-wrap">
+      {
+        siteConfig.payLinks.map((link) => {
+          const hoverImage = whenHover(link.text)
+          return (
+            <div class="link-container flex-shrink-0 flex-grow-0 mr-4 mb-2">
+              <a aria-label={link.text} class="prose-link">
+                <i class:list={[link.icon]} />
+                {link.text}
+              </a>
+              {hoverImage && <img src={hoverImage} alt={`${link.text} Hover Image`} class="hover-image" />}
+            </div>
+          )
+        })
+      }
+    </p>
+
+    <hr class="hr-line" />
+
     <p>男，目前在 北京 工作，目前居住在 北京昌平</p>
     <p>学着写一点后端，写一点前端，也写一点游戏，也做一点测试</p>
-
     <p>工作基于 Work with</p>
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       {
         siteConfig.workWithLinks.map((link) => (
-          <a aria-label={link.text} target="_blank" class="prose-link">
+          <a aria-label={link.text} class="prose-link">
             <i class:list={[link.icon]} />
             {link.text}
           </a>

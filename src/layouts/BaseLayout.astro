@@ -22,6 +22,7 @@ const { ...head } = Astro.props
     <!-- Header.vue 组件 -->
     <!-- client:load 水合指令，页面加载时立即加载组件 JS -->
     <Header client:load />
+
     <main
       class="grow max-w-3xl mx-auto sm:pt-36 pt-26 pb-16 px-6 relative"
       transition:animate={fade({ duration: 400 })}
@@ -31,6 +32,7 @@ const { ...head } = Astro.props
 
       <!-- ScrollToTop.vue 组件 -->
       <ScrollToTop client:load />
+
       <!-- Footer.vue 组件 -->
       <Footer />
     </main>

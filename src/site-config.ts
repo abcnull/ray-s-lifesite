@@ -39,6 +39,19 @@ export const siteConfig = {
     },
   ],
 
+  // 主页 打赏支持
+  payLinks: [
+    {
+      text: 'WechatPay',
+      icon: 'i-ri-wechat-line',
+    },
+    {
+      text: 'AliPay',
+      icon: 'i-simple-icons-alipay',
+    },
+  ],
+
+  // 主页 工作基于
   workWithLinks: [
     {
       text: 'JetBrains IDE',
