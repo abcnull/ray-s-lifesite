@@ -46,7 +46,7 @@ astro-project/
 npm install
 ```
 
-项目运行后访问控制台提供的连接即可访问网页
+项目运行后访问控制台提供的链接即可访问网页
 ```shell
 npm run dev
 ```
