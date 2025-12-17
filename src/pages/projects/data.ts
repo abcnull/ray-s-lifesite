@@ -6,7 +6,7 @@ export const projectData: ProjectData = [
     projects: [
       {
         text: 'basic_springboot_demo',
-        description: 'springboot_demo 草稿 demo',
+        description: 'java + springboot Web 草稿 demo',
         icon: 'i-ri-github-line',
         href: 'https://github.com/abcnull/basic_springboot_demo',
       },
