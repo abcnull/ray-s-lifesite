@@ -1,6 +1,6 @@
 # ray s 个人站点
 
-使用前端 astro 框架搭建个人站点，使用 vercel 进行部署
+本项目为个人站点项目。使用前端 astro 框架搭建个人站点，使用 vercel 进行部署
 
 不接受 pr，你可 star，无需 fork 和 issues
 
