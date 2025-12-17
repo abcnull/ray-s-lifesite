@@ -2,7 +2,7 @@
 
 本项目为个人站点项目。使用前端 astro 框架搭建个人站点，使用 vercel 进行部署
 
-不接受 pr，你可 star，无需 fork 和 issues
+无需 pull，无需 fork 和 issues，可 star，但不接受 pr
 
 需要遵守 LICENSE 参照最下方
 
