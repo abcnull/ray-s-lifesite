@@ -5,10 +5,10 @@ export const projectData: ProjectData = [
     title: 'Web 后端项目 Web Backend',
     projects: [
       {
-        text: 'basic_springboot_demo',
-        description: 'springboot_demo 草稿 demo',
+        text: 'springboot-demo',
+        description: 'java + springboot 框架，中间结合各种中间件 demo',
         icon: 'i-ri-github-line',
-        href: 'https://github.com/abcnull/basic_springboot_demo',
+        href: 'https://github.com/abcnull/springboot-demo',
       },
       {
         text: 'gindemo',
