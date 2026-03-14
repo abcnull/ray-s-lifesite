@@ -18,10 +18,15 @@ export const projectData: ProjectData = [
       },
     ],
   },
-
   {
     title: 'Web 前端项目 Web Frontend',
     projects: [
+      {
+        text: 'vue2-element-demo',
+        description: '[vue] vue2 + ElementUI + axios + router + js 入门学习项目',
+        icon: 'i-ri-github-line',
+        href: 'https://github.com/abcnull/vue2-element-demo',
+      },
       {
         text: 'html-and-css',
         description: '[html] html + css 入门教学多种 css 样式 tutorial',
